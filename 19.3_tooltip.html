@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip</title>
+  <style>
+
+    p{
+      text-align: center;
+      margin: 100px 250px;
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+
+    span{
+      color:violet;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block; 
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: yellow;
+      color: black;
+      text-align: center;
+      font-size: 1rem;
+      padding: 2px;
+      border-radius: 25px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    .tooltip .tooltiptext::before {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      right: 100%; 
+      margin-top: -8px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent yellow transparent transparent;
+    }
+
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quas fugiat sed sequi soluta odit laudantium voluptatum, nulla repudiandae quis ipsa recusandae reprehenderit nihil numquam, esse in. Suscipit tenetur numquam <span class="tooltip">sunt!<span class="tooltiptext">This is a badass tooltip</span></span> At error minus harum rerum, quia aliquam, cumque beatae nostrum enim consectetur quam inventore blanditiis facilis excepturi omnis reprehenderit laboriosam est temporibus modi nesciunt expedita consequuntur <span class="tooltip">quibusdam!<span class="tooltiptext">This is a badass tooltip</span></span> Ex, quod et laudantium officia aut fugiat officiis mollitia numquam deserunt est magnam, voluptates, dignissimos veniam! Vel perferendis accusantium alias iusto nostrum? Quidem impedit, voluptatem voluptatibus nostrum delectus <span class="tooltip">animi<span class="tooltiptext">This is a badass tooltip</span></span> odio asperiores laborum iste, exercitationem quaerat saepe facere dolorum! Molestiae a asperiores illum.</p>
+</body>
+</html>

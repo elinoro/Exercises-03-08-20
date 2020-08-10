@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Href Attribute</title>
+  <style>
+    .ClickHere::after{
+      content: '('attr(href)')';
+      padding-left: 5px;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <p>Please visit this <a href="http://www.appleseeds.org.il" class="ClickHere">website</a></p>
+</body>
+</html>
